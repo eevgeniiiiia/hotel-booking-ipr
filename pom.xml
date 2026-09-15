@@ -54,15 +54,35 @@
 
     </dependencies>
 
-    <build>
-        <plugins>
+   <build>
+    <plugins>
 
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
 
-        </plugins>
-    </build>
+       <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-checkstyle-plugin</artifactId>
+    <version>3.6.0</version>
+
+    <configuration>
+        <configLocation>checkstyle.xml</configLocation>
+    </configuration>
+
+    <executions>
+        <execution>
+            <id>checkstyle-validation</id>
+            <phase>verify</phase>
+            <goals>
+                <goal>check</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+
+    </plugins>
+</build>
 
 </project>
