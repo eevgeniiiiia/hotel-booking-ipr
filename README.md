@@ -128,3 +128,5 @@ GitHub Actions выполняет следующие этапы:
 Ветка develop используется для интеграции изменений.
 
 Новые функциональные изменения разрабатываются в отдельных ветках feature/*.
+
+CI/CD pipeline: GitHub Actions performs build, static analysis, tests, packaging and Docker image build.
